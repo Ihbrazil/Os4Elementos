@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1690674211 source:c:\users\master\onedrive\documentos\projetos\codeblocks\c\jogo\os4elementos\os4elementos\main.c
+	<stdio.h>
+	<stdlib.h>
+
