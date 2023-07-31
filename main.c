@@ -6,11 +6,11 @@ int main()
     int pontosPlayer1, pontosPlayer2;
 
     char escolha, player1[10], player2[10];
-    int sair = 0;
+    char sair = '0';
 
         escolha = '0';
 
-        sair = 1;
+        sair = '1';
         pontosPlayer1, pontosPlayer2 = 100;
 
 
@@ -26,8 +26,8 @@ int main()
 
         printf("%s Vs. %s", player1, player2);
 
-//        while (sair == 1)
-    //    {
+        while (sair == '1')
+        {
                 printf("\nAtualmente %s tem %d hp\n", player2, pontosPlayer2);
                 printf("Atualmente %s tem %d hp\n", player1, pontosPlayer1);
 
@@ -50,7 +50,7 @@ int main()
                 {
                     case '1':
                             printf("Escolheu o ataque Eruption");
-                            pontosPlayer2 = pontosPlayer2 - 3;
+                            pontosPlayer2 -= pontosPlayer2 - 3;
                             printf("Fez um dano de 3 e o %s ficou com %d Pontos", player2, pontosPlayer2);
                             break;
                     case '2':
@@ -99,8 +99,9 @@ int main()
                             printf("O oponente fez um dano de 4 e o %s e voce ficou com %d Pontos", player1, pontosPlayer1);
                             break;
                 }
-            scanf("%d", &sair);
- //       }
+            printf("\n0 - para sair ou 1 - para continuar:  ");
+            scanf("%s", &sair);
+        }
         printf("Ganhou!");
     return 0;
 }
